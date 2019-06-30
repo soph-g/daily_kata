@@ -1,6 +1,8 @@
 function ScrabbleSolver(string) {
   this.string = string;
   this.onePoint = ['a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'];
+  this.twoPoints = ['d', 'g'];
+
   return {
     score: () => {
       if (this.string.length == 0) {
@@ -9,7 +11,10 @@ function ScrabbleSolver(string) {
       if (this.onePoint.includes(this.string)) {
         return 1;
       }
-      return 2
+      if (this.twoPoints.includes(this.string)) {
+        return 2
+      }
+      return 3
     }
   }
 }

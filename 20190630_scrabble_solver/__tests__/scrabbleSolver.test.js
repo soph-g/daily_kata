@@ -60,7 +60,25 @@ describe('ScrabbleSolver', () => {
       test('g', () => {
         scrabbleSolver = new ScrabbleSolver('g');
         expect(scrabbleSolver.score()).toEqual(2);
-      })
+      });
+    });
+    describe('3 point letters', () => {
+      test('b', () => {
+        scrabbleSolver = new ScrabbleSolver('b');
+        expect(scrabbleSolver.score()).toEqual(3);
+      });
+      test('c', () => {
+        scrabbleSolver = new ScrabbleSolver('c');
+        expect(scrabbleSolver.score()).toEqual(3);
+      });
+      test('m', () => {
+        scrabbleSolver = new ScrabbleSolver('m');
+        expect(scrabbleSolver.score()).toEqual(3);
+      });
+      test('p', () => {
+        scrabbleSolver = new ScrabbleSolver('p');
+        expect(scrabbleSolver.score()).toEqual(3);
+      });
     });
   });
 });

@@ -25,6 +25,8 @@ function ScrabbleSolver(string) {
     k: 5,
     j: 8,
     x: 8,
+    q: 10,
+    z: 10
   }
 
   return {

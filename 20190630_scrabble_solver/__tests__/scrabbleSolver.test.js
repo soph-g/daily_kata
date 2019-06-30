@@ -118,5 +118,15 @@ describe('ScrabbleSolver', () => {
         expect(scrabbleSolver.score()).toEqual(8);
       });
     });
+    describe('10 point letters', () => {
+      test('q', () => {
+        scrabbleSolver = new ScrabbleSolver('q');
+        expect(scrabbleSolver.score()).toEqual(10);
+      });
+      test('z', () => {
+        scrabbleSolver = new ScrabbleSolver('z');
+        expect(scrabbleSolver.score()).toEqual(10);
+      });
+    });
   });
 });

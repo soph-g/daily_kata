@@ -9,8 +9,12 @@ describe('ScrabbleSolver', () => {
         expect(scrabbleSolver.score()).toEqual(0);
       });
       test('invalid string', () => {
-        scrabbleSolver = new ScrabbleSolver(null)
-        expect(scrabbleSolver.score()).toEqual(0)
+        scrabbleSolver = new ScrabbleSolver(null);
+        expect(scrabbleSolver.score()).toEqual(0);
+      })
+      test('invalid characters', () => {
+        scrabbleSolver = new ScrabbleSolver(" \t\n");
+        expect(scrabbleSolver.score()).toEqual(0);
       })
     });
 

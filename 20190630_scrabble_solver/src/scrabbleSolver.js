@@ -33,9 +33,10 @@ function ScrabbleSolver(string) {
 
   return {
     score: () => {
-      if (string == null) return this.score
+      if (string == null) return this.score;
       chars = this.format(string);
       chars.forEach((letter) => {
+        if (!this.points[letter]) return this.score = 0;
         this.score += this.points[letter]
       })
       return this.score;

@@ -8,6 +8,10 @@ describe('ScrabbleSolver', () => {
         scrabbleSolver = new ScrabbleSolver('');
         expect(scrabbleSolver.score()).toEqual(0);
       });
+      test('invalid string', () => {
+        scrabbleSolver = new ScrabbleSolver(null)
+        expect(scrabbleSolver.score()).toEqual(0)
+      })
     });
 
     describe('1 point letters', () => {
@@ -139,5 +143,11 @@ describe('ScrabbleSolver', () => {
         expect(scrabbleSolver.score()).toEqual(22)
       });
     });
+    describe('capital letters', () => {
+      test('OXYPHENBUTAZONE', () => {
+        scrabbleSolver = new ScrabbleSolver('OXYPHENBUTAZONE')
+        expect(scrabbleSolver.score()).toEqual(41)
+      });
+    })
   });
 });

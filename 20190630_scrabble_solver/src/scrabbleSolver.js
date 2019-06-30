@@ -1,5 +1,4 @@
 function ScrabbleSolver(string) {
-  this.string = string;
   this.points = {
     a: 1,
     e: 1,
@@ -28,17 +27,18 @@ function ScrabbleSolver(string) {
     q: 10,
     z: 10
   }
+  this.score = 0;
+
+  this.format = (string) => string.toLowerCase().split('');
 
   return {
     score: () => {
-      score = 0;
-      if (this.string.length == 0) {
-        return score;
-      }
-      this.string.split('').forEach((letter) => {
-        score += this.points[letter]
+      if (string == null) return this.score
+      chars = this.format(string);
+      chars.forEach((letter) => {
+        this.score += this.points[letter]
       })
-      return score;
+      return this.score;
     }
   }
 }

@@ -23,6 +23,8 @@ function ScrabbleSolver(string) {
     w: 4,
     y: 4,
     k: 5,
+    j: 8,
+    x: 8,
   }
 
   return {

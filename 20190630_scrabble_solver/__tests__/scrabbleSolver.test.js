@@ -108,5 +108,15 @@ describe('ScrabbleSolver', () => {
         expect(scrabbleSolver.score()).toEqual(5);
       });
     });
+    describe('8 point letters', () => {
+      test('j', () => {
+        scrabbleSolver = new ScrabbleSolver('j');
+        expect(scrabbleSolver.score()).toEqual(8);
+      });
+      test('x', () => {
+        scrabbleSolver = new ScrabbleSolver('x');
+        expect(scrabbleSolver.score()).toEqual(8);
+      });
+    });
   });
 });

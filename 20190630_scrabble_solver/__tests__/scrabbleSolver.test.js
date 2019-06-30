@@ -102,5 +102,11 @@ describe('ScrabbleSolver', () => {
         expect(scrabbleSolver.score()).toEqual(4);
       });
     });
+    describe('5 point letters', () => {
+      test('k', () => {
+        scrabbleSolver = new ScrabbleSolver('k');
+        expect(scrabbleSolver.score()).toEqual(5);
+      });
+    });
   });
 });

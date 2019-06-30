@@ -128,5 +128,16 @@ describe('ScrabbleSolver', () => {
         expect(scrabbleSolver.score()).toEqual(10);
       });
     });
+
+    describe('multiple letters', () => {
+      test('street', () => {
+        scrabbleSolver = new ScrabbleSolver('street')
+        expect(scrabbleSolver.score()).toEqual(6)
+      });
+      test('quirky', () => {
+        scrabbleSolver = new ScrabbleSolver('quirky')
+        expect(scrabbleSolver.score()).toEqual(22)
+      });
+    });
   });
 });

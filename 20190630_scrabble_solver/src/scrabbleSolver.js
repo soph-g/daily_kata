@@ -31,10 +31,14 @@ function ScrabbleSolver(string) {
 
   return {
     score: () => {
+      score = 0;
       if (this.string.length == 0) {
-        return 0;
+        return score;
       }
-      return this.points[this.string];
+      this.string.split('').forEach((letter) => {
+        score += this.points[letter]
+      })
+      return score;
     }
   }
 }

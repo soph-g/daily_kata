@@ -52,5 +52,15 @@ describe('ScrabbleSolver', () => {
         expect(scrabbleSolver.score()).toEqual(1)
       });
     });
+    describe('2 point letters', () => {
+      test('d', () => {
+        scrabbleSolver = new ScrabbleSolver('d');
+        expect(scrabbleSolver.score()).toEqual(2);
+      });
+      test('g', () => {
+        scrabbleSolver = new ScrabbleSolver('g');
+        expect(scrabbleSolver.score()).toEqual(2);
+      })
+    });
   });
 });

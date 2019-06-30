@@ -80,5 +80,27 @@ describe('ScrabbleSolver', () => {
         expect(scrabbleSolver.score()).toEqual(3);
       });
     });
+    describe('4 point letters', () => {
+      test('f', () => {
+        scrabbleSolver = new ScrabbleSolver('f');
+        expect(scrabbleSolver.score()).toEqual(4);
+      });
+      test('h', () => {
+        scrabbleSolver = new ScrabbleSolver('h');
+        expect(scrabbleSolver.score()).toEqual(4);
+      });
+      test('v', () => {
+        scrabbleSolver = new ScrabbleSolver('v');
+        expect(scrabbleSolver.score()).toEqual(4);
+      });
+      test('w', () => {
+        scrabbleSolver = new ScrabbleSolver('w');
+        expect(scrabbleSolver.score()).toEqual(4);
+      });
+      test('y', () => {
+        scrabbleSolver = new ScrabbleSolver('y');
+        expect(scrabbleSolver.score()).toEqual(4);
+      });
+    });
   });
 });

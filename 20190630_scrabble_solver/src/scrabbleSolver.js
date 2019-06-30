@@ -2,6 +2,7 @@ function ScrabbleSolver(string) {
   this.string = string;
   this.onePoint = ['a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'];
   this.twoPoints = ['d', 'g'];
+  this.threePoints = ['b', 'c', 'm', 'p']
 
   return {
     score: () => {
@@ -14,7 +15,10 @@ function ScrabbleSolver(string) {
       if (this.twoPoints.includes(this.string)) {
         return 2
       }
-      return 3
+      if (this.threePoints.includes(this.string)) {
+        return 3
+      }
+      return 4
     }
   }
 }

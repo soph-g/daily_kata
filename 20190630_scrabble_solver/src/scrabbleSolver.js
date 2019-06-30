@@ -1,7 +1,11 @@
-function ScrabbleSolver() {
+function ScrabbleSolver(string) {
+  this.string = string;
   return {
     score: () => {
-      return 0;
+      if (this.string.length == 0) {
+        return 0;
+      }
+      return 1;
     }
   }
 }
